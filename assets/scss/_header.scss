@@ -1,0 +1,129 @@
+// Header
+body.sticky-header {
+    header {
+        background: $white;
+        .section {
+            .site-nav {
+                ul.menu {
+                    li {
+                        &:last-child {
+                            a {
+                                &:after {
+                                    background: url('../images/icons/link-blue.svg') no-repeat transparent;
+                                    background-size: contain;
+                                }
+                            }                        
+                        }
+                        a {
+                            color: $blue;
+                        }
+                    }
+                }
+            }
+            .site-nav-mobile {
+                svg {
+                    fill: $blue;
+                }
+            }
+        }
+    }
+}
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 9;
+    .section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+
+        .site-brand {
+            .logo {
+                a {
+                    &:before {
+                        content: '';
+                        display: flex;
+                        background: $blue;
+                        position: absolute;
+                        top: 0px;
+                        width: 128px;
+                        height: 101px;
+                        @media (max-width: $breakpoint-t) {
+                            height: 58px;
+                        }
+                    }                    
+                    img {
+                        position: relative;
+                        max-width: 100px;
+                        margin-top: 0px;
+                        margin-left: 11px;
+                    }
+                }
+            }
+        }
+        .site-nav {
+            display: flex;
+            justify-content: end; //center;
+            align-items: center;
+            flex-grow: 1;
+            @media (max-width: ($breakpoint-t) ) {
+                display: none;
+            }
+            .menu-menu-container {
+                width: 100%;
+            }
+            ul.menu {
+                display: flex;
+                flex-wrap: wrap;
+
+                li {
+                    display: block;
+                    padding: 8px 27px;
+                    &:last-child {
+                        padding-right: 0;
+                        a {
+                            &:after {
+                                content: '';
+                                display: inline-flex;
+                                background: url('../images/icons/link-white.svg') no-repeat transparent;
+                                background-size: contain;
+                                width: 11px;
+                                height: 11px;
+                                margin-left: 0.8rem;
+                            }
+                        }                        
+                    }
+                    
+                    a {
+                        font-family: $font-sofia;
+                        font-weight: 600;
+                        font-size: 1rem;
+                        text-transform: uppercase;
+                        color: $white;
+
+                        &:hover,
+                        &:focus,
+                        &:active {
+                            text-decoration: underline;
+                            text-decoration-thickness: 1px;
+                            text-underline-offset: 2px;
+                        }
+                    }
+                }
+            }
+        }
+        .site-nav-mobile {            
+            display: none;
+            @media (max-width: ($breakpoint-t) ) {
+                // TODO: Add mobile menu overlay
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+            }
+            svg {
+                fill: $white;
+            }
+        }
+    }
+}

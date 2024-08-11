@@ -1,0 +1,92 @@
+//
+// Sections
+//
+section {
+  .page-banner {
+    position: relative;
+    
+    .page-banner-wrapper {
+      &:before {
+        content: '';
+        z-index: 1;
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: transparent linear-gradient(0deg, #191919 0%, #19191917 50%) 0% 0% no-repeat padding-box;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        object-fit: cover;
+        aspect-ratio: calc(2732 / 1536);
+
+        min-height: 434px;
+        max-height: 768px;
+        @media (max-width: $breakpoint-m) {
+          min-height: calc(95dvh);
+        }
+      }
+
+      .page-banner-content {
+        z-index: 2;
+        position: absolute;
+        bottom: 57px;
+        left: $side-padding-m;
+        right: $side-padding-m;
+        max-width: calc(#{$max-width-container} - #{$side-padding-m} - #{$side-padding-m});
+        margin-left: auto;
+        margin-right: auto;
+        @media (min-width: $breakpoint-t) {
+          padding-left: $side-padding-m;
+        }
+
+        .page-banner-content-wrapper {
+          display: flex;
+          flex-direction: column;
+          .page-title {
+            display: block;
+            color: $white;
+            line-height: 0.9;
+            margin-bottom: 57px;
+
+            span {
+              text-decoration: underline;
+              text-decoration-thickness: 1px;
+              text-underline-offset: 0.05em;
+              text-decoration-color: $light-blue;
+              &.sport {
+                &:before {
+                  content: '';
+                  display: inline-flex;
+                  background: url('../images/sport.jpg') no-repeat transparent;
+                  background-size: contain;
+                  height: 0.65em;
+                  aspect-ratio: 1 / 1;
+                  margin-right: 0.2em;
+                  border-radius: 1vw;
+                }
+              }              
+            }
+          }
+          .cta-wrapper {
+            display: inline-flex;
+            justify-content: space-between;
+            align-items: center;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+  .instagram-feed {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    @media (max-width: $breakpoint-m) {
+      padding-top: $side-padding-m;
+      padding-bottom: $side-padding-m;
+    }
+  }
+}

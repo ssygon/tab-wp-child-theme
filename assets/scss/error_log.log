@@ -1,0 +1,62 @@
+08/07/24 4:01:42: main.scss - Undefined mixin buttons: main.scss on line 10, at column 1
+08/07/24 5:13:46: main.scss - Undefined variable $header-padding: _header.scss on line 4, at column 9
+Call Stack:
+#0 import _header.scss main.scss on line 12
+08/07/24 5:14:08: main.scss - Undefined variable $header-padding: _header.scss on line 4, at column 9
+Call Stack:
+#0 import _header.scss main.scss on line 12
+08/07/24 5:15:48: main.scss - Undefined variable $header-padding: _header.scss on line 4, at column 9
+Call Stack:
+#0 import _header.scss main.scss on line 12
+08/07/24 5:16:09: main.scss - Undefined variable $header-padding: _header.scss on line 4, at column 9
+Call Stack:
+#0 import _header.scss main.scss on line 12
+08/07/24 5:17:48: main.scss - Undefined variable $header-padding: _header.scss on line 4, at column 9
+Call Stack:
+#0 import _header.scss main.scss on line 12
+08/07/24 5:18:10: main.scss - Undefined variable $header-padding: _header.scss on line 4, at column 9
+Call Stack:
+#0 import _header.scss main.scss on line 12
+08/07/24 5:19:49: main.scss - Undefined variable $header-padding: _header.scss on line 4, at column 9
+Call Stack:
+#0 import _header.scss main.scss on line 12
+08/07/24 5:20:11: main.scss - Undefined variable $header-padding: _header.scss on line 4, at column 9
+Call Stack:
+#0 import _header.scss main.scss on line 12
+08/07/24 5:21:50: main.scss - Undefined variable $header-padding: _header.scss on line 4, at column 9
+Call Stack:
+#0 import _header.scss main.scss on line 12
+08/07/24 5:22:12: main.scss - Undefined variable $header-padding: _header.scss on line 4, at column 9
+Call Stack:
+#0 import _header.scss main.scss on line 12
+08/07/24 5:23:51: main.scss - Undefined variable $header-padding: _header.scss on line 4, at column 9
+Call Stack:
+#0 import _header.scss main.scss on line 12
+08/07/24 5:24:13: main.scss - Undefined variable $header-padding: _header.scss on line 4, at column 9
+Call Stack:
+#0 import _header.scss main.scss on line 12
+08/07/24 5:25:52: main.scss - Undefined variable $header-padding: _header.scss on line 4, at column 9
+Call Stack:
+#0 import _header.scss main.scss on line 12
+08/07/24 5:26:14: main.scss - Undefined variable $header-padding: _header.scss on line 4, at column 9
+Call Stack:
+#0 import _header.scss main.scss on line 12
+08/07/24 5:27:53: main.scss - Undefined variable $header-padding: _header.scss on line 4, at column 9
+Call Stack:
+#0 import _header.scss main.scss on line 12
+08/07/24 5:28:15: main.scss - Undefined variable $header-padding: _header.scss on line 4, at column 9
+Call Stack:
+#0 import _header.scss main.scss on line 12
+08/07/24 5:29:53: main.scss - Undefined variable $header-height-m: _header.scss on line 23, at column 1
+Call Stack:
+#0 import _header.scss main.scss on line 12
+08/07/24 5:30:17: main.scss - Undefined variable $header-height-m: _header.scss on line 23, at column 1
+Call Stack:
+#0 import _header.scss main.scss on line 12
+08/07/24 5:31:54: main.scss - Undefined variable $header-height-m: _header.scss on line 23, at column 1
+Call Stack:
+#0 import _header.scss main.scss on line 12
+08/07/24 5:32:17: main.scss - Undefined variable $header-height-m: _header.scss on line 23, at column 1
+Call Stack:
+#0 import _header.scss main.scss on line 12
+08/07/24 5:36:19: main.scss - unexpected }: failed at `` /www/versaan_504/public/wp-content/themes/hello-elementor-child/assets/scss/_footer.scss on line 10, at column 0

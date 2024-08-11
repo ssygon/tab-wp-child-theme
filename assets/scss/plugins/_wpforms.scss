@@ -1,0 +1,15 @@
+// WP Forms - Defaults
+.wpforms-container-full {
+    input,
+    select,
+    textarea {
+        &:focus {
+            box-shadow: none;
+        }
+    }
+    button[type="submit"] {
+        &:after {
+            border: none;
+        }
+    }
+}

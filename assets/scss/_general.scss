@@ -1,0 +1,23 @@
+html {
+    overflow-x: hidden;
+}
+
+main#content {
+    max-width: none;
+}
+
+.side {
+    padding-left: $side-padding;
+    padding-right: $side-padding;
+}
+
+.inner-section {
+    display: flex;
+    flex-wrap: wrap;
+    @media (max-width: $breakpoint-m) {
+        flex-direction: column;
+    }
+    > div {
+        flex: 1;
+    }
+}

@@ -1,0 +1,36 @@
+// Typography
+$font-roboto: 'Roboto', sans-serif;
+$font-sofia: 'Sofia Sans Condensed', sans-serif;
+
+
+// Breakpoints
+$breakpoint-m: 768px;
+$breakpoint-t: 1024px;
+
+
+// Layouts
+$max-width-container: 1358px;
+$side-padding-m: 28px;
+$side-padding: $side-padding-m;
+$section-tb-m: 40px;
+
+
+// Colours
+$black: #000000;
+$white: #ffffff;
+$blue: #1A2A57;
+$light-blue: #9CADCB;
+
+
+// Background Colours
+$bg-white: $white;
+$bg-blue: $blue;
+
+
+// Round borders
+$rounded-radius: 18px;
+
+
+// Header heights / padding
+$header-padding-m: 20px;
+$header-padding: 27px;

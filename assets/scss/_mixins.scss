@@ -1,0 +1,354 @@
+
+// Layouts
+@mixin layout-constraints {
+    header {
+        .section {
+            max-width: calc(#{$max-width-container});
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: $side-padding-m;
+            padding-right: $side-padding-m;
+            padding-top: $header-padding;
+            padding-bottom: $header-padding;
+            @media (max-width: $breakpoint-t) {
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+        }
+    }
+    main {
+        section {
+            .inner-section {
+                max-width: calc(#{$max-width-container});
+                margin-left: auto;
+                margin-right: auto;
+                padding-left: $side-padding-m;
+                padding-right: $side-padding-m;
+                @media (max-width: $breakpoint-m) {
+                    margin-top: $section-tb-m;
+                    margin-bottom: $section-tb-m;
+                }
+            }
+        }
+    }
+    footer {
+        // section {
+        //     max-width: calc(#{$max-width-container} + #{$side-padding-m} + #{$side-padding-m});
+        //     margin-left: auto;
+        //     margin-right: auto;
+        // }
+    }
+}
+
+
+// Typography
+@mixin h1 {
+    margin-top: 0;
+    margin-bottom: 1em;
+    color: $blue;
+    line-height: 1.1;
+    font-family: $font-sofia;
+    font-size: clamp(33px,5.5vw,100px);
+    font-weight: 700;
+}
+@mixin h2 {
+    margin-top: 0;
+    margin-bottom: 1em;
+    color: $blue;
+    line-height: 1.1;
+    font-family: $font-sofia;
+    font-size: clamp(25px,4vw,57px);
+    font-weight: 700;
+}
+@mixin h3 {
+    margin-top: 0;
+    margin-bottom: 1em;
+    color: $blue;
+    line-height: 1.1;
+    font-family: $font-sofia;
+    font-size: clamp(26px,4vw,30px);
+    font-weight: 700;
+}
+@mixin h4 {
+    margin-top: 0;
+    margin-bottom: 1em;
+    color: $blue;
+    line-height: 1.1;
+    font-family: $font-sofia;
+    font-size: clamp(23px,4vw,24px);
+    font-weight: 700;
+}
+@mixin h5 {
+    margin-top: 0;
+    margin-bottom: 1em;
+    color: $blue;
+    line-height: 1.1;
+    font-family: $font-sofia;
+    font-size: clamp(20px,4vw,23px);
+    font-weight: 700;
+}
+@mixin h6 {
+    margin-top: 0;
+    margin-bottom: 1em;
+    color: $blue;
+    line-height: 1.1;
+    font-family: $font-sofia;
+    font-size: clamp(17px,4vw,18px);
+    font-weight: 700;
+}
+@mixin p {
+    margin-bottom: 1em;
+    color: $black;
+    line-height: 1.3;
+    font-family: $font-roboto;
+    font-size: clamp(17px,2vw,18px);
+}
+@mixin a {
+    font-family: $font-roboto;
+    color: $blue;
+    &:hover,
+    &:focus,
+    &:active {
+        color: $blue;
+    }
+}
+
+@mixin typography {
+
+    body {
+        // Typography Resets
+        --e-global-typography-text-font-family: #{$font-roboto};
+        font-family: $font-roboto;
+        
+        // Website Typography
+        h1 {
+            @include h1;
+        }
+        h2 {
+            @include h2;
+        }
+        h3 {
+            @include h3;
+        }
+        h4 {
+            @include h4;
+        }
+        h5 {
+            @include h5;
+        }
+        h6 {
+            @include h6;
+        }
+        p {
+            @include p;
+        }
+        a {
+            @include a;
+        }
+    }
+
+}
+
+
+//
+// CTA / Buttons
+//
+@mixin btn-standard {
+    transition: none;
+    outline: 0;
+    border: 2px solid $light-blue;
+    border-radius: 3rem;
+    box-shadow: none;
+    background-color: transparent;
+    color: $white;
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    font-family: $font-sofia;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1;
+    padding: 16px 30px;
+    min-width: 221px;
+    @media (max-width: $breakpoint-m) {
+        padding: 7px 20px;
+        min-width: 155px;
+    }
+
+    &:hover {
+        box-shadow: none;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        outline: 0;
+        background: $white;
+        color: $blue;
+        text-decoration: none;
+
+        span {
+            background: $blue;
+            &:before {
+                background: url('../images/icons/arrow-white.svg') no-repeat transparent;
+            }
+        }
+    }
+
+    span {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $white;
+        border-radius: 50vw;
+        width: 28px;
+        height: 28px;
+
+        &:before {
+            content: '';
+            display: flex;
+            background: url('../images/icons/arrow-blue.svg') no-repeat transparent;
+            background-size: contain;
+            width: 11px;
+            height: 8px;
+        }
+    }
+}
+
+@mixin btn-primary {
+    @include btn-standard;
+}
+
+@mixin btn-secondary {
+    @include btn-standard;
+}
+
+
+@mixin back-to-top {
+    justify-self: end;
+    a {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        &:before {
+            content: '';
+            display: flex;
+            text-decoration: underline;
+            background: url('../images/icons/arrow-blue.svg') no-repeat transparent;
+            background-size: contain;
+            width: 20px;
+            height: 20px;
+            rotate: -90deg;
+            position: absolute;
+            top: 12px;
+            left: calc(50% + 3px);
+            translate: -50%;
+            z-index: 1;
+        }
+        &:after {
+            content: '';
+            display: flex;
+            background: $white;
+            border-radius: 50vw;
+            width: 46px;
+            height: 46px;
+            position: absolute;
+            top: 0px;
+        }
+        span {
+            padding-top: 60px;
+            display: flex;
+            text-align: center;
+        }
+    }
+}
+
+@mixin back-to-bottom {
+    align-self: center;
+    a {
+        display: block;
+        position: relative;
+        &:before {
+            content: '';
+            display: flex;
+            text-decoration: underline;
+            background: url('../images/icons/arrow-white.svg') no-repeat transparent;
+            background-size: contain;
+            width: 20px;
+            height: 20px;
+            rotate: 90deg;
+            position: absolute;
+            top: 13px;
+            left: 10px;
+            z-index: 1;
+        }
+        &:after {
+            content: '';
+            display: flex;
+            background: $blue;
+            border-radius: 50vw;
+            border: 1px solid $light-blue;
+            width: 46px;
+            height: 46px;
+        }
+        span {
+            padding-top: 60px;
+            display: flex;
+        }
+    }
+}
+
+
+
+//
+// Class Helpers
+//
+
+// Buttons
+@mixin buttons {
+    .btn-standard {
+        @include btn-standard;
+    }
+
+    .btn-primary {
+        @include btn-primary;
+    }
+
+    .btn-secondary {
+        @include btn-secondary;
+    }
+}
+
+
+// Text Colours
+@mixin text-colours {
+    .text-blue {
+        color: $blue;
+    }
+    .text-light-blue {
+        color: $light-blue;
+    }
+}
+
+// Background Colours
+@mixin background-colours {
+    .bg-white {
+        background: $bg-white;
+    }
+    .bg-blue {
+        background: $bg-blue;
+    }
+}
+
+
+@mixin back-to-top-bottom {
+    .back-to-top {
+        @include back-to-top;
+    }
+    .back-to-bottom {
+        @include back-to-bottom;
+    }
+}
